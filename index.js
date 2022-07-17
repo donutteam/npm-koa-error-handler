@@ -31,6 +31,7 @@ export class ErrorHandlerMiddleware
 			{
 				console.error("[ErrorHandlerMiddleware] An error occured:", error);
 
+				context.response.status = 500;
 				context.response.type = "text";
 				context.response.body = "An error occured but was caught by the server's internal error handler.";
 			}
