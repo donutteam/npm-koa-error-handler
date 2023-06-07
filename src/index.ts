@@ -1,18 +1,18 @@
 //
+// Imports
+//
+
+import type { Middleware } from "koa";
+
+//
 // Error Handler Middleware
 //
 
-/**
- * A class for creating Koa middlewares that catch downstream errors.
- */
+/** A class for creating Koa middlewares that catch downstream errors. */
 export class ErrorHandlerMiddleware
 {
-	/**
-	 * The middleware function.
-	 * 
-	 * @type {import("koa").Middleware}
-	 */
-	execute;
+	/** The middleware function. */
+	execute : Middleware;
 
 	/**
 	 * Constructs a new ErrorHandlerMiddleware.
